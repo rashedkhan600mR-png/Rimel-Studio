@@ -12,7 +12,8 @@ type UploadRow
   = {
   id: string; filename: string; mime_type: string; size_bytes: number;
   storage_path: string; status: string; created_at: string
-  type Job = { id: string; job_date: string; customer_name: string; upload_id: string | null; filename: string | null }
+ } 
+type Job = { id: string; job_date: string; customer_name: string; upload_id: string | null; filename: string | null }
 const bn = (n: number | string) => String(n).replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[Number(d)])
 const prettySize = (n: number) => n < 1024 ? `${n} B` : n < 1048576 ? `${(n/1024).toFixed(1)} KB` : `${(n/1048576).toFixed(1)} MB`
 const monthNames = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর']
